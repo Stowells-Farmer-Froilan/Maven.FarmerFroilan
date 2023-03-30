@@ -2,9 +2,10 @@ package com.zipcodewilmington.froilansfarm;
 
 public class Chicken extends Produce{
     Chicken chicken;
-    private int numberChickens = 15;
-
+//    private int numberChickens = 15;
     private int eggsLaid;
+    private Object unFertilizedEgg;
+    private int fertilizedEggs;
 
     public Chicken(){
         eggsLaid = 0;
@@ -22,4 +23,10 @@ public class Chicken extends Produce{
     public int getEggsLaid(){
         return eggsLaid;
     }
+
+    public boolean hasBeenFertilized(Object unFertilizedEgg){
+        boolean fertilized = false;
+        return fertilized;
+    }
+
 }
