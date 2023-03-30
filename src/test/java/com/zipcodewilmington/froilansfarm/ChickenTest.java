@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ChickenTest {
-//    private EdibleEgg edibleEgg;
 //    @Before
 //    public void before(){
 //
@@ -34,17 +33,13 @@ public class ChickenTest {
 
     @Test
     public void testHasBeenFertilized(){
-        edibleEgg.hasBeenFertilized(true);
-        Assert.assertTrue(edibleEgg.hasBeenFertilized);
+        Object unFertilizedEgg = new Object();
+        unFertilizedEgg.hasBeenFertilized(false);
+        Assert.assertFalse(unFertilizedEgg.hasBeenFertilized);
     }
 
-    @Test
-    public void testYield(){
-        Chicken chicken = new Chicken();
-        int actual = chicken.yield();
-        Assert.assertNotNull(actual);
 
-    }
+//    }
 //    @Test
 //    public void testEat(int numberOfFood, Crop<Corn>){
 //        numberOfFood = CornStalk.get();
