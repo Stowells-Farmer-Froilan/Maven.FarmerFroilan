@@ -27,7 +27,7 @@ public class TestCropDuster {
         Assert.assertTrue(cropDuster instanceof Rideable);
     }
     @Test
-    public void testFertilizeCrops() {
+    public void testFertilize() {
         Field field = new Field();
         Pilot pilot = new Pilot();
         pilot.rideCropDuster();
@@ -35,6 +35,7 @@ public class TestCropDuster {
         int actual = field.size();
         Assert.assertEquals(expected, actual);
     }
+
 
     @Test
     public void testThatFarmerCannotRideCropDuster() {

@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class TestTractor {
@@ -18,5 +19,18 @@ public class TestTractor {
     public void testThatTractorIsInstanceOfRideable() {
         Tractor tractor = new Tractor();
         Assert.assertTrue(tractor instanceof Rideable);
+    }
+    @Test
+    public void testThatHarvestIncreasesTomatoYield(){
+    }
+    @Test
+    public void testThatHarvestIncreasesCornYield(){
+    }
+    @Test
+    public void testThatHarvestDecreasesCornCrop(){
+    }
+
+    @Test
+    public void testThatHarvestDecreasesTomatoCrop(){
     }
 }
