@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Chicken extends Produce{
+public class Chicken extends Produce {
     Chicken chicken;
     private int eggsLaid;
     private int cornEaten;
@@ -21,7 +21,7 @@ public class Chicken extends Produce{
     public int getEggsLaid(){
         return eggsLaid;
     }
-    public boolean hasBeenFertilized(Object unFertilizedEgg){
+    public boolean hasBeenFertilized(){
         boolean fertilized = false;
         return fertilized;
     }
