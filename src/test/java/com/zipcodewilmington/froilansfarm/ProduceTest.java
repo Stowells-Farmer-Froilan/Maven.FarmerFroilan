@@ -12,11 +12,8 @@ public class ProduceTest {
     }
     @Test
     public void testYield(){
-        Produce expected =
-
         Produce actual = produce.yield();
-        Assert.assertEquals(expected, actual);
-
+        Assert.assertNotNull(actual);
     }
 
     @Test
