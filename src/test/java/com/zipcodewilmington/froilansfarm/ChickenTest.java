@@ -5,23 +5,31 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class ChickenTest {
-
-    public Chicken chicken;
 //    private EdibleEgg edibleEgg;
-    @Before
-    public void before(){
-        chicken = new Chicken();
-    }
+//    @Before
+//    public void before(){
+//
+//    }
 
-    public ChickenTest(Chicken chicken) {
-        this.chicken = chicken;
+    public ChickenTest() {
+        Chicken chicken = new Chicken();
     }
 
     @Test
     public void testMakeNoise(){
+        Chicken chicken = new Chicken();
         String expected = "Cluck";
         String actual = chicken.makeNoise();
         Assert.assertEquals(expected, actual);
+    }
+
+
+    @Test
+    public void testLayEgg(){
+        Chicken chicken = new Chicken();
+        int expected = 1;
+        chicken.layEgg();
+        Assert.assertEquals(expected, chicken.getEggsLaid());
     }
 
     @Test
@@ -32,6 +40,7 @@ public class ChickenTest {
 
     @Test
     public void testYield(){
+        Chicken chicken = new Chicken();
         int actual = chicken.yield();
         Assert.assertNotNull(actual);
 
