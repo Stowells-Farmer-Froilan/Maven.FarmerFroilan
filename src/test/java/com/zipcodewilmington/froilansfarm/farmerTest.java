@@ -49,4 +49,14 @@ public class farmerTest {
         //then
         Assert.assertEquals(expected, actual);
     }
+    @Test
+    public void testSpeak(){
+        //given
+        Farmer farmer = new Farmer();
+        String expected = "Yeah I be farming";
+        //when
+        String actual = farmer.speak();
+        //then
+        Assert.assertEquals(expected, actual);
+    }
 }

@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
 import org.junit.Assert;
+import org.junit.Test;
 
 public class animalTest {
 
@@ -13,5 +14,16 @@ public class animalTest {
         String actual = animal.makeNoise;
         //then
         Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testEat(){
+        //given
+        Animal animal = new Animal();
+        String expected = "You have ate";
+        //when
+        String actual = animal.eat;
+        //then
+        Assert.assertEquals(expected, actual);
+
     }
 }

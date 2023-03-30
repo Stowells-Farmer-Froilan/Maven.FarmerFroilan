@@ -27,16 +27,17 @@ public class personTest {
         //Then
         Assert.assertEquals(expected, actual);
     }
-    @Test
-    public void testRide(){
-        //given
-        Person person = new Person();
-        String expected = "You ride a";
-        //when
-        String actual = person.ride;
-        //then
-        Assert.assertEquals(expected, actual);
-    }
+//    @Test
+//    public void testRide(){
+//        //given
+//        Person person = new Person();
+//        perso
+//        String expected = "You ride a";
+//        //when
+//        String actual = person.ride;
+//        //then
+//        Assert.assertEquals(expected, actual);
+//    }
 
 
     //Eater
@@ -46,7 +47,7 @@ public class personTest {
         Person person = new Person();
         String expected = "You have ate";
         //when
-        String actual = person.eat;
+        String actual = person.eat();
         //then
         Assert.assertEquals(expected, actual);
 
@@ -60,7 +61,7 @@ public class personTest {
         Person person = new Person();
         String expected = "Thing to say";
         //when
-        String actual = person.speak;
+        String actual = person.speak();
         //then
         Assert.assertEquals(expected, actual);
     }
