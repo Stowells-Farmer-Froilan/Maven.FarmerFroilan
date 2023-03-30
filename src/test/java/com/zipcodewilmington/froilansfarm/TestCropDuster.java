@@ -27,27 +27,29 @@ public class TestCropDuster {
         Assert.assertTrue(cropDuster instanceof Rideable);
     }
     @Test
-    public void testThatFertilizeIncreasesCornCrop() {
+    public void testThatFertilizeSetsCornHasBeenFertilizedToTrue() {
         Field field = new Field();
         CropDuster cropDuster = new CropDuster();
-        CropRow<CornStalk> cornRow = new CropRow<>;
-        field.add(cornRow);
+        Botanist botanist = new Botanist();
         Pilot pilot = new Pilot();
+        botanist.plant(corn);
         pilot.ride(cropDuster);
-        int expected = 1;
-        int actual = cornRow.size();
+        boolean expected = true;
+        boolean actual = Corn.hasBeenFertilized();
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void testThatFertilizeIncreasesTomatoCrop() {
+    public void testThatFertilizeSetsTomatoHasBeenFertilizedToTrue() {
         Field field = new Field();
         CropDuster cropDuster = new CropDuster();
-        CropRow<TomatoPlant> tomatoRow = new CropRow<>;
-        field.add(tomatoRow);
+        Botanist botanist = new Botanist();
         Pilot pilot = new Pilot();
+        botanist.plant(tomato);
         pilot.ride(cropDuster);
-        int expected = 1;
-        int actual = tomatoRow.size();
+        boolean expected = true;
+        boolean actual = Tomato.hasBeenFertilized();
+        Assert.assertEquals(expected, actual);
     }
     @Test
     public void testThatFertilizeIncreasesEdibleEggYield() {
@@ -55,6 +57,9 @@ public class TestCropDuster {
         Chicken chicken = new Chicken();
         Pilot pilot = new Pilot();
         pilot.ride(cropDuster);
+        int expected = 1;
+        int actual = eggStorage.size();
+        Assert.assertEquals(expected, actual);
 
     }
     public void testThatFertilizeMakesUnFertilizedEggFalseInChicken() {
