@@ -7,7 +7,7 @@ public class TestChickenCoop {
     @Test
     public void testInstanceOfStorage() {
         // Given
-        ChickenCoop<Chickens> chickenCoop = new ChickenCoop<>();
+        ChickenCoop<Chicken> chickenCoop = new ChickenCoop<>();
         // Then
         Assert.assertTrue(chickenCoop instanceof Storage);
     }
@@ -15,28 +15,23 @@ public class TestChickenCoop {
     @Test
     public void testAddChicken(){
         // Given
-        ChickenCoop<Chickens>  chickenCoop = new ChickenCoop<>();
-        CropRow cornRow = new CropRow();
+        ChickenCoop<Chicken>  chickenCoop = new ChickenCoop<>();
+        Chicken chickie = new Chicken();
         // When
-        field.add(cornRow);
-        field.add(tomatoRow);
-        field.add(mangoRow);
+        chickenCoop.add(chickie);
         // Then
-        Assert.assertEquals(3, field.size());
+        Assert.assertEquals(1, chickenCoop.size());
     }
     @Test
     public void testRemoveChicken(){
         // Given
-        Field<CropRow> field = new Field<>();
-        CropRow cornRow = new CropRow();
-        CropRow tomatoRow = new CropRow();
-        CropRow mangoRow = new CropRow();
+        ChickenCoop<Chicken>  chickenCoop = new ChickenCoop<>();
+        Chicken chickie = new Chicken();
         // When
-        field.add(cornRow);
-        field.add(tomatoRow);
-        field.add(mangoRow);
+        chickenCoop.add(chickie);
+        chickenCoop.remove(chickie);
         // Then
-        Assert.assertEquals(3, field.size());
+        Assert.assertEquals(0, chickenCoop.size());
     }
 
 
