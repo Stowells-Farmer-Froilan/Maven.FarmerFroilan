@@ -38,14 +38,19 @@ public class ChickenTest {
         Assert.assertFalse(unFertilizedEgg.hasBeenFertilized);
     }
 
+    @Test
+    public void testEatCorn(){
+        Chicken chicken = new Chicken();
+        int expected = 3;
+        chicken.eatCorn();
+        Assert.assertEquals(expected, chicken.eatCorn());
+    }
 
-//    }
-//    @Test
-//    public void testEat(int numberOfFood, Crop<Corn>){
-//        numberOfFood = CornStalk.get();
-//        int expected = numberOfFood -
-//        int eaten = Chicken.eat();
-//
-//        Assert.assertEquals(eaten);
-//    }
+    @Test
+    public void testEatTomato(){
+        Chicken chicken = new Chicken();
+        int expected = 1;
+        chicken.eatTomato();
+        Assert.assertEquals(expected, chicken.eatTomato());
+    }
 }
