@@ -23,7 +23,8 @@ public class TestTractor {
     @Test
     public void testThatHarvestIncreasesTomatoYield(){
         Tractor tractor = new Tractor();
-        tractor.fertilize();
+        Farmer farmer = new Farm();
+        farmer.ride(tractor);
         int expected = 0;
         int actual = tomatoStorage.size();
         Assert.assertEquals(expected, actual);
@@ -31,7 +32,8 @@ public class TestTractor {
     @Test
     public void testThatHarvestIncreasesCornYield(){
         Tractor tractor = new Tractor();
-        tractor.fertilize();
+        Farmer farmer = new Farm();
+        farmer.ride(tractor);
         int expected = 0;
         int actual = cornStorage.size();
         Assert.assertEquals(expected, actual);
@@ -40,7 +42,8 @@ public class TestTractor {
     @Test
     public void testThatHarvestDecreasesCornStalk(){
         Tractor tractor = new Tractor();
-        tractor.fertilize();
+        Farmer farmer = new Farm();
+        farmer.ride(tractor);
         int expected = 0;
         int actual = cornStorage.size();
         Assert.assertEquals(expected, actual);
@@ -49,7 +52,8 @@ public class TestTractor {
     @Test
     public void testThatHarvestDecreasesTomatoPlant(){
         Tractor tractor = new Tractor();
-        tractor.fertilize();
+        Farmer farmer = new Farm();
+        farmer.ride(tractor);
         int expected = 0;
         int actual = tomatoStorage.size();
         Assert.assertEquals(expected, actual);
