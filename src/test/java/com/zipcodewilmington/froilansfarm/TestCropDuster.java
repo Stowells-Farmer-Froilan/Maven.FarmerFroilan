@@ -27,7 +27,17 @@ public class TestCropDuster {
         Assert.assertTrue(cropDuster instanceof Rideable);
     }
     @Test
-    public void testFertilize() {
+    public void testThatFertilizeIncreasesCornCrop() {
+    }
+
+    @Test
+    public void testThatFertilizeIncreasesTomatoCrop() {
+    }
+
+    public void testThatFertilizeDecreasesCrowRows() {
+    }
+
+    public void testThatFertilizeDecreasesTomatoPlantRows() {
         Field field = new Field();
         Pilot pilot = new Pilot();
         pilot.rideCropDuster();

@@ -27,10 +27,10 @@ public class TestTractor {
     public void testThatHarvestIncreasesCornYield(){
     }
     @Test
-    public void testThatHarvestDecreasesCornCrop(){
+    public void testThatHarvestDecreasesCornStalk(){
     }
 
     @Test
-    public void testThatHarvestDecreasesTomatoCrop(){
+    public void testThatHarvestDecreasesTomatoPlant(){
     }
 }
