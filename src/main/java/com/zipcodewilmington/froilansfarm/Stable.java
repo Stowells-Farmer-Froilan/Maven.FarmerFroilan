@@ -1,6 +1,8 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Stable {
+import java.util.ArrayList;
+
+public class Stable<Horse> extends ArrayList<Horse> {
 
 
 }
