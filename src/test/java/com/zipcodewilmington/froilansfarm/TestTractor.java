@@ -22,15 +22,36 @@ public class TestTractor {
     }
     @Test
     public void testThatHarvestIncreasesTomatoYield(){
+        Tractor tractor = new Tractor();
+        tractor.fertilize();
+        int expected = 0;
+        int actual = tomatoStorage.size();
+        Assert.assertEquals(expected, actual);
     }
     @Test
     public void testThatHarvestIncreasesCornYield(){
+        Tractor tractor = new Tractor();
+        tractor.fertilize();
+        int expected = 0;
+        int actual = cornStorage.size();
+        Assert.assertEquals(expected, actual);
     }
+
     @Test
     public void testThatHarvestDecreasesCornStalk(){
+        Tractor tractor = new Tractor();
+        tractor.fertilize();
+        int expected = 0;
+        int actual = cornStorage.size();
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
     public void testThatHarvestDecreasesTomatoPlant(){
+        Tractor tractor = new Tractor();
+        tractor.fertilize();
+        int expected = 0;
+        int actual = tomatoStorage.size();
+        Assert.assertEquals(expected, actual);
     }
 }

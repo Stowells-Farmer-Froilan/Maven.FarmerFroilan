@@ -28,23 +28,55 @@ public class TestCropDuster {
     }
     @Test
     public void testThatFertilizeIncreasesCornCrop() {
+        Field field = new Field();
+        CropRow<CornStalk> cornRow = new CropRow<>;
+        field.add(cornRow);
+        Pilot pilot = new Pilot();
+        pilot.ride(CropDuster);
+        int expected = 1;
+        int actual = cornRow.size();
     }
 
     @Test
     public void testThatFertilizeIncreasesTomatoCrop() {
+        Field field = new Field();
+        CropRow<TomatoPlant> tomatoRow = new CropRow<>;
+        field.add(tomatoRow);
+        Pilot pilot = new Pilot();
+        pilot.ride(CropDuster);
+        int expected = 1;
+        int actual = tomatoRow.size();
+    }
+    @Test
+    public void testThatFertilizeIncreasesEdibleEggYield() {
+        int fertilizedEggs;
+        Chicken chicken = new Chicken();
+        Pilot pilot = new Pilot();
+        pilot.ride(CropDuster);
+
+    }
+    public void testThatFertilizeMakesUnFertilizedEggFalseInChicken() {
+        Chicken chicken = new Chicken();
+        Pilot pilot = new Pilot();
+        pilot.ride(CropDuster);
+        boolean expected = true;
+        boolean actual = chicken.hasBeenFertilize();
+        Assert.assertEquals(expected, actual);
     }
 
-    public void testThatFertilizeDecreasesCrowRows() {
+    public void testThatFertilizeDecreasesCropRows() {
     }
 
     public void testThatFertilizeDecreasesTomatoPlantRows() {
         Field field = new Field();
         Pilot pilot = new Pilot();
-        pilot.rideCropDuster();
+        pilot.ride(CropDuster);
         int expected = 1;
         int actual = field.size();
         Assert.assertEquals(expected, actual);
     }
+
+
 
 
     @Test
