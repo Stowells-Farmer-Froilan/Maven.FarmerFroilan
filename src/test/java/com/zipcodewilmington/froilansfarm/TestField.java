@@ -8,13 +8,13 @@ public class TestField {
     public void testAddCropRow(){
         // Given
         Field<CropRow> field = new Field<>();
+        CropRow cornRow = new CropRow();
+        CropRow tomatoRow = new CropRow();
+        CropRow mangoRow = new CropRow();
         // When
-        CropRow<corn> row1 = new CropRow();
-        CropRow<tomato> row2 = new CropRow();
-        CropRow<papaya> row3 = new CropRow();
-        field.add(row1);
-        field.add(row2);
-        field.add(row3);
+        field.add(cornRow);
+        field.add(tomatoRow);
+        field.add(mangoRow);
         // Then
         Assert.assertEquals(3, field.size());
     }
@@ -22,27 +22,25 @@ public class TestField {
     public void testInstanceOfStorage(){
         // Given
         Field<CropRow> field = new Field<>();
-        // When
-        Assert.assertTrue(field instanceof Storage);
         // Then
+        Assert.assertTrue(field instanceof Storage);
     }
     @Test
     public void testRemoveCropRow(){ // move to CropRow
         // Given
-        Field<CropRow> field  = new Field<>();
+        Field<CropRow> field = new Field<>();
+        CropRow cornRow = new CropRow();
+        CropRow tomatoRow = new CropRow();
+        CropRow papayaRow = new CropRow();
         // When
-        CropRow<corn> row1 = new CropRow();
-        CropRow<tomato> row2 = new CropRow();
-        field.add(row1);
-        field.add(row2);
-        field.remove(row2);
+        field.add(cornRow);
+        field.add(tomatoRow);
+        field.add(papayaRow);
+        field.remove(cornRow);
         // Then
-        Assert.assertEquals(1, field.size());
+        Assert.assertEquals(2, field.size());
+        Assert.assertEquals(tomatoRow, field.get(0));
     }
 
-    @Test
-    public void testHarvestCrop(){
-
-    }
 
 }
