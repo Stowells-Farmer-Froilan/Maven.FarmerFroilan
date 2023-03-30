@@ -13,7 +13,19 @@ public class TestChickenCoop {
     }
 
     @Test
-    public void testAddCropRow(){
+    public void testAddChicken(){
+        // Given
+        ChickenCoop<Chickens>  chickenCoop = new ChickenCoop<>();
+        CropRow cornRow = new CropRow();
+        // When
+        field.add(cornRow);
+        field.add(tomatoRow);
+        field.add(mangoRow);
+        // Then
+        Assert.assertEquals(3, field.size());
+    }
+    @Test
+    public void testRemoveChicken(){
         // Given
         Field<CropRow> field = new Field<>();
         CropRow cornRow = new CropRow();
