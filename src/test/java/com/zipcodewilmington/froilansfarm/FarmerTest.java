@@ -20,6 +20,7 @@ public class FarmerTest {
     public void rideTractorTomatoTest(){
         //given
         Farmer farmer = new Farmer("Bob");
+        Tractor tractor = new Tractor();
         farmer.ride(tractor);
         int expected = 0;
         //when
@@ -31,6 +32,7 @@ public class FarmerTest {
     public void rideTractorCornTest(){
         //given
         Farmer farmer = new Farmer("Bob");
+        Tractor tractor = new Tractor();
         farmer.ride(tractor);
         int expected = 0;
         //when
@@ -42,6 +44,7 @@ public class FarmerTest {
     public void rideHorseTest(){
         //given
         Farmer farmer = new Farmer("Bob");
+        Horse horse = new Horse();
         farmer.ride(horse);
         String expected = "neigh";
         //when
@@ -55,7 +58,7 @@ public class FarmerTest {
         Farmer farmer = new Farmer("Bob");
         String expected = "Yeah I be farming";
         //when
-        String actual = farmer.speak();
+        String actual = farmer.makeNoise();
         //then
         Assert.assertEquals(expected, actual);
     }
