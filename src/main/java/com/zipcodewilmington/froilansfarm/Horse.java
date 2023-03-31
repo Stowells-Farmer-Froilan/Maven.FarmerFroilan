@@ -31,6 +31,21 @@ public class Horse<T extends Edible> extends Animal implements Rideable, Eater, 
         return tomatoEaten;
     }
 
+    @Override
+    public void eat() {
+
+    }
+
+    @Override
+    public String makeNoise() {
+        return null;
+    }
+
+    @Override
+    public void operates() {
+
+    }
+
     // Todo: asdflk;jadsf
 }
 
