@@ -24,8 +24,8 @@ public class TestTractor {
     @Test
     public void testThatOperateDoesNotHarvestUnfertilizedCornStalks(){
         Tractor tractor = new Tractor();
-        Botanist botanist = new Botanist();
-        Farmer farmer = new Farmer();
+        Botanist botanist = new Botanist(null);
+        Farmer farmer = new Farmer(null);
         botanist.plant(corn);
         farmer.ride(tractor);
         boolean expected = false;
@@ -37,8 +37,8 @@ public class TestTractor {
     @Test
     public void testThatOperateDoesNotHarvestUnfertilizedTomatoPlants(){
         Tractor tractor = new Tractor();
-        Botanist botanist = new Botanist();
-        Farmer farmer = new Farmer();
+        Botanist botanist = new Botanist(null);
+        Farmer farmer = new Farmer(null);
         botanist.plant(tomato);
         farmer.ride(tractor);
         boolean expected = false;
@@ -56,7 +56,7 @@ public class TestTractor {
     @Test
     public void testThatOperateIncreasesTomatoStorage(){
         Tractor tractor = new Tractor();
-        Farmer farmer = new Farm();
+        Farmer farmer = new Farmer(null);
         farmer.ride(tractor);
         int expected = 0;
         int actual = tomatoStorage.size();
@@ -65,7 +65,7 @@ public class TestTractor {
     @Test
     public void testThatOperateIncreasesCornStorage(){
         Tractor tractor = new Tractor();
-        Farmer farmer = new Farm();
+        Farmer farmer = new Farmer(null);
         farmer.ride(tractor);
         int expected = 0;
         int actual = cornStorage.size();
@@ -75,7 +75,7 @@ public class TestTractor {
     @Test
     public void testThatOperateDecreasesCornStalk(){
         Tractor tractor = new Tractor();
-        Farmer farmer = new Farm();
+        Farmer farmer = new Farmer(null);
         farmer.ride(tractor);
         int expected = 0;
         int actual = cornStorage.size();
@@ -85,7 +85,7 @@ public class TestTractor {
     @Test
     public void testThatOperateDecreasesTomatoPlant(){
         Tractor tractor = new Tractor();
-        Farmer farmer = new Farm();
+        Farmer farmer = new Farmer(null);
         farmer.ride(tractor);
         int expected = 0;
         int actual = tomatoStorage.size();

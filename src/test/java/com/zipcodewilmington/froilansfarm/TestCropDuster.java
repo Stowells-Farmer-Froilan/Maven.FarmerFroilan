@@ -29,8 +29,8 @@ public class TestCropDuster {
     @Test
     public void testThatOperateSetsCornHasBeenFertilizedToTrue() {
         CropDuster cropDuster = new CropDuster();
-        Botanist botanist = new Botanist();
-        Pilot pilot = new Pilot();
+        Botanist botanist = new Botanist(null);
+        Pilot pilot = new Pilot(null);
         botanist.plant(corn);
         pilot.ride(cropDuster);
         boolean expected = true;
@@ -41,8 +41,8 @@ public class TestCropDuster {
     @Test
     public void testThatOperateSetsTomatoHasBeenFertilizedToTrue() {
         CropDuster cropDuster = new CropDuster();
-        Botanist botanist = new Botanist();
-        Pilot pilot = new Pilot();
+        Botanist botanist = new Botanist(null);
+        Pilot pilot = new Pilot(null);
         botanist.plant(tomato);
         pilot.ride(cropDuster);
         boolean expected = true;
@@ -53,7 +53,7 @@ public class TestCropDuster {
     public void testThatOperateMakesHasBeenFertilizedToTrueInChicken() {
         Chicken chicken = new Chicken();
         CropDuster cropDuster = new CropDuster();
-        Pilot pilot = new Pilot();
+        Pilot pilot = new Pilot(null);
         pilot.ride(cropDuster);
         boolean expected = true;
         boolean actual = chicken.hasBeenFertilized();
