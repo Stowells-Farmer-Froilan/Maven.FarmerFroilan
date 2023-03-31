@@ -11,11 +11,4 @@ public class TestVehicle {
         Assert.assertTrue(vehicle instanceof Rideable);
     }
 
-//    @Test
-//    public void testOperate(){
-//        Vehicle vehicle = new Vehicle();
-//        boolean expected = true;
-//        boolean actual = vehicle.operate();//does something
-//        Assert.assertEquals(expected, actual);
-//    }
 }
