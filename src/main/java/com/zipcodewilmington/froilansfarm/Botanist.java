@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Botanist<T extends Crop> extends Farmer implements NoiseMaker, Eater {
+public class Botanist<T extends Crop> extends Farmer implements NoiseMaker {
     CropRow<T> cropRow;
     public Botanist(String name) {
         super(name);
@@ -9,11 +9,10 @@ public class Botanist<T extends Crop> extends Farmer implements NoiseMaker, Eate
         cropRow.add((T) seed);
     }
 
-    public void speak() {
+    public void eat() {
 
     }
-
-    public void eat() {
+    public void makeNoise(){
 
     }
 }

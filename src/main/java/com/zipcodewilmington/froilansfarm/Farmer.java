@@ -17,4 +17,8 @@ public class Farmer extends Person implements NoiseMaker, Rider{
     public void makeNoise() {
 
     }
+
+    public void eat() {
+
+    }
 }

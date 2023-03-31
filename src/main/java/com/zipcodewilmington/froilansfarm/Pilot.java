@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Pilot extends Person implements NoiseMaker, Rider{
+public class Pilot extends Person implements Rider{
     public Pilot(String name) {
         super(name);
     }
@@ -14,6 +14,10 @@ public class Pilot extends Person implements NoiseMaker, Rider{
     }
 
     public void dismount() {
+
+    }
+
+    public void eat() {
 
     }
 }
