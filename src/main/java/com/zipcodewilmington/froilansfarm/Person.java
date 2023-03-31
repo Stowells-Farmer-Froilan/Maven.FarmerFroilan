@@ -16,8 +16,6 @@ public abstract class Person {
     }
 
     public void eat(Crop crop) {
-
-        return  null;
     }
 
 }
