@@ -10,14 +10,14 @@ public class CropDuster extends Aircraft {
 
         for (int i = 0; i < field.size(); i++){
             if (cropRow.get(i) == CornStalk) {
-                cropRow.hasBeenFertilized = true;
+                cropRow.get(i).hasBeenFertilized() = true;
             } else if (cropRow.get(i) == TomatoPlant) {
-                cropRow.hasBeenFertilized = true;
+                cropRow.hasBeenFertilized() = true;
             }
         }
 
         for (int i = 0; i < unfertilizedEggs.size(); i++){
-            egg.hasBeenFertilized = true;
+            eggStorage.get(i).hasBeenFertilized() = true;
         }
     }
 }

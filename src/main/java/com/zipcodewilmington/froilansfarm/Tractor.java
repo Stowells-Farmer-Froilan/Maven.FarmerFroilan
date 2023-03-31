@@ -10,12 +10,12 @@ public class Tractor extends FarmVehicle{
     public void operates() {
         for (int i = 0; i < field.size(); i++) {
             if (cropRow.get(i) == CornStalk) {
-                if (cropRow.get(i).hasBeenFertilized == true) {
-                    cropRow.get(i).hasBeenHarvested = true;
+                if (cropRow.get(i).hasBeenFertilized() == true) {
+                    cropRow.get(i).hasBeenHarvested() = true;
                 }
             } else if (cropRow.get(i) == TomatoPlant) {
-                if (cropRow.get(i).hasBeenFertilized == true) {
-                    cropRow.get(i).hasBeenHarvested = true;
+                if (cropRow.get(i).hasBeenFertilized() == true) {
+                    cropRow.get(i).hasBeenHarvested() = true;
                 }
             }
         }
