@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class ChickenCoop<Chicken> extends ArrayList<Chicken> {
 
+
     public int unFertilizedEggs() {
         Chicken chicken = new Chicken();
         int totalEggs = 0;
