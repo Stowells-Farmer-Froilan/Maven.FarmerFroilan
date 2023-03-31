@@ -1,4 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Vehicle implements Rideable {
+public abstract class Vehicle implements Rideable {
 }
