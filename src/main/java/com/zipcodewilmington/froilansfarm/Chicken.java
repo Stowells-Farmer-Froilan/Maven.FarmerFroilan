@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Chicken extends Produce {
+public class Chicken extends Animal {
     Chicken chicken;
     private int eggsLaid;
     private int cornEaten;
@@ -21,26 +21,26 @@ public class Chicken extends Produce {
     public int getEggsLaid(){
         return eggsLaid;
     }
-    public boolean hasBeenFertilized(){
-        CropDuster duster = new CropDuster();
-        boolean fertilized;
-        if (duster.operates() != null) {
-            fertilized = true;
-        } else {
-            fertilized = false;
-        }
-        return fertilized;
-    }
-
+//    public boolean hasBeenFertilized(){
+//        CropDuster duster = new CropDuster();
+//        boolean fertilized = false;
+//        while (duster.operates()) {
+//            fertilized = true;
+//        }
+//        return fertilized;
+//    }
+//
     public int eatCorn(){
-        if (cornStorage.size() > 3){
+        CornStorage store = new CornStorage();
+        if (store.getCornStorage() > 3){
             cornEaten = 3;
         }
         return cornEaten;
     }
 
     public int eatTomato(){
-        if (tomatoStorage.size() > 1){
+        TomatoStorage store = new TomatoStorage();
+        if (store.getTomatoStorage() > 1){
             tomatoEaten = 1;
         }
         return tomatoEaten;
