@@ -12,20 +12,20 @@ public class BotanistTest {
     @Test
     public void testSpeak(){
         //given
-        Botanist botanist = new Botanist("Bob");
+        Farmer farmer = new Farmer("Bob");
         String expected = "Yeah I be planting";
         //when
-        String actual = botanist.makeNoise();
+        String actual = farmer.makeNoise();
         //then
         Assert.assertEquals(expected, actual);
     }
     @Test
     public void testPlant(){
         //given
-        Botanist botanist = new Botanist("Bob");
+        Farmer farmer = new Farmer("Bob");
         String expected = "There I go planting again!";
         //when
-        String actual = botanist.plant();
+        String actual = farmer.plant(Corn);
         //then
         Assert.assertEquals(expected, actual);
     }
