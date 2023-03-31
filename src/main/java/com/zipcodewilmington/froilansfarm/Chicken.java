@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Chicken extends Produce {
+public class Chicken extends Animal {
     Chicken chicken;
     private int eggsLaid;
     private int cornEaten;
@@ -23,11 +23,9 @@ public class Chicken extends Produce {
     }
     public boolean hasBeenFertilized(){
         CropDuster duster = new CropDuster();
-        boolean fertilized;
-        if (duster.operates() != null) {
+        boolean fertilized = false;
+        while (duster.operates()) {
             fertilized = true;
-        } else {
-            fertilized = false;
         }
         return fertilized;
     }
