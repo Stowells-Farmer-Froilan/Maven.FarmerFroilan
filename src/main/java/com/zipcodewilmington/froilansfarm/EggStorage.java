@@ -1,6 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class EggStorage {
+public class EggStorage implements Storage{
     ChickenCoop coop;
     Chicken chick;
     public int unFertilizedEggs() {
