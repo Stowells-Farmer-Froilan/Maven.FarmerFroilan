@@ -10,13 +10,13 @@ public class TestStable {
     @Test
     public void testInstanceOfStorage() {
         // Given
-        ChickenCoop<Chicken> chickenCoop = new ChickenCoop<>();
+        Stable<Horse>  stable = new Stable<>();
         // Then
-        Assert.assertTrue(chickenCoop instanceof Storage);
+        Assert.assertTrue(stable instanceof Storage);
     }
 
     @Test
-    public void testAddChicken(){
+    public void testAddHorse(){
         // Given
         Stable<Horse>  stable = new Stable<>();
         Horse horse = new Horse();
@@ -27,15 +27,15 @@ public class TestStable {
     }
 
     @Test
-    public void testRemoveChicken(){
+    public void testRemoveHorse(){
         // Given
-        ChickenCoop<Chicken>  chickenCoop = new ChickenCoop<>();
-        Chicken chickie = new Chicken();
+        Stable<Horse>  stable = new Stable<>();
+        Horse horse = new Horse();
         // When
-        chickenCoop.add(chickie);
-        chickenCoop.remove(chickie);
+        stable.add(horse);
+        stable.remove(horse);
         // Then
-        Assert.assertEquals(0, chickenCoop.size());
+        Assert.assertEquals(0, stable.size());
     }
 
 

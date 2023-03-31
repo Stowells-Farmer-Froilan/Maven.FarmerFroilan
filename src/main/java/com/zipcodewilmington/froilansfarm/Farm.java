@@ -5,17 +5,17 @@ import java.util.List;
 
 public class Farm {
 
-    List<ChickenCoop> coopy = new ArrayList<>();
+    List<FarmHouse> coopy = new ArrayList<>();
     List<Stable> stable = new ArrayList<>();
 
-    public void addChickenCoop(ChickenCoop<Chicken> coop){
+    public void addChickenCoop(FarmHouse<Chicken> coop){
         coopy.add(coop);
     }
-    public List<ChickenCoop> getChickenCoop(){
+    public List<FarmHouse> getChickenCoop(){
         return coopy;
     }
 
-    public void removeChickenCoop(ChickenCoop<Chicken> coop) {
+    public void removeChickenCoop(FarmHouse<Chicken> coop) {
         coopy.remove(coop);
 
     }
