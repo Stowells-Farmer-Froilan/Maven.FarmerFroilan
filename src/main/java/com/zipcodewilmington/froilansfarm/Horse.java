@@ -37,8 +37,8 @@ public class Horse<T extends Edible> extends Animal implements Rideable, Eater, 
     }
 
     @Override
-    public void makeNoise() {
-
+    public String makeNoise() {
+        return "Neigh";
     }
 
     @Override
