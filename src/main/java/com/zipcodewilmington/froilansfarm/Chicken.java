@@ -24,7 +24,7 @@ public class Chicken extends Produce {
     public boolean hasBeenFertilized(){
         CropDuster duster = new CropDuster();
         boolean fertilized;
-        if (duster.fertilize() != null) {
+        if (duster.operates() != null) {
             fertilized = true;
         } else {
             fertilized = false;
