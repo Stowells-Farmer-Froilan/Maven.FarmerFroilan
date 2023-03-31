@@ -31,7 +31,7 @@ public class PersonTest {
 //    public void testRide(){
 //        //given
 //        Person person = new Person();
-//        perso
+//        person
 //        String expected = "You ride a";
 //        //when
 //        String actual = person.ride;
