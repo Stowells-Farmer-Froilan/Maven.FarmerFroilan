@@ -1,6 +1,7 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Farmer extends Person implements NoiseMaker, Rider{
+public class Farmer extends Person implements NoiseMaker, Rider, Botanist{
+    CropRow<Crop> cropRow;
     public Farmer(String name) {
         super(name);
     }
@@ -20,5 +21,13 @@ public class Farmer extends Person implements NoiseMaker, Rider{
     }
 
     public void ride(Tractor tractor) {
+    }
+
+    public void eat() {
+
+    }
+    @Override
+    public void plant(Crop crop) {
+        cropRow.add(crop);
     }
 }
