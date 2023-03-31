@@ -28,23 +28,25 @@ public class TestCropDuster {
     }
 //    @Test
 //    public void testThatOperateSetsCornHasBeenFertilizedToTrue() {
+//        Crop corn = new Crop();
 //        CropDuster cropDuster = new CropDuster();
 //        Farmer farmer = new Farmer(null);
 //        Pilot pilot = new Pilot(null);
-//        farmer.plant("corn");
-//        pilot.ride(cropDuster);
+//        farmer.plant(corn);
+//        pilot.mount();//cropDuster
 //        boolean expected = true;
 //        boolean actual = Corn.hasBeenFertilized();
 //        Assert.assertEquals(expected, actual);
 //    }
-//
+
 //    @Test
 //    public void testThatOperateSetsTomatoHasBeenFertilizedToTrue() {
+//        Crop tomato = new Crop();
 //        CropDuster cropDuster = new CropDuster();
 //        Farmer farmer = new Farmer(null);
 //        Pilot pilot = new Pilot(null);
 //        farmer.plant(tomato);
-//        pilot.ride(cropDuster);
+//        pilot.mount();//cropDuster
 //        boolean expected = true;
 //        boolean actual = Tomato.hasBeenFertilized();
 //        Assert.assertEquals(expected, actual);
@@ -54,21 +56,22 @@ public class TestCropDuster {
 //        Chicken chicken = new Chicken();
 //        CropDuster cropDuster = new CropDuster();
 //        Pilot pilot = new Pilot(null);
-//        pilot.ride(cropDuster);
+//        pilot.mount();//cropDuster
 //        boolean expected = true;
 //        boolean actual = chicken.hasBeenFertilized();
 //        Assert.assertEquals(expected, actual);
 //    }
-//    @Test
-//    public void testThatOperateDecrementsEggStorage(){
-//        Chicken chicken = new Chicken();
-//        CropDuster cropDuster = new CropDuster();
-//        Pilot pilot = new Pilot(null);
-//        pilot.ride(cropDuster);
-//        int expected = 0;
-//        int actual = EggStorage.size();
-//        Assert.assertEquals(expected, actual);
-//    }
+    @Test
+    public void testThatOperateDecrementsEggStorage(){
+        EggStorage eggStorage = new EggStorage();
+        Chicken chicken = new Chicken();
+        CropDuster cropDuster = new CropDuster();
+        Pilot pilot = new Pilot(null);
+        pilot.mount();//cropDuster
+        int expected = 0;
+        int actual = eggStorage.getUnFertilizedEggs();
+        Assert.assertEquals(expected, actual);
+    }
 
     @Test
     public void testThatFlyReturnsMessage(){
