@@ -24,12 +24,12 @@ public class Chicken extends Animal {
 //    public boolean hasBeenFertilized(){
 //        CropDuster duster = new CropDuster();
 //        boolean fertilized = false;
-//        while (duster.operates()) {
+//        if (duster.operates() == true); {
 //            fertilized = true;
 //        }
 //        return fertilized;
 //    }
-//
+
     public int eatCorn(){
         CornStorage store = new CornStorage();
         if (store.getCornStorage() > 3){
