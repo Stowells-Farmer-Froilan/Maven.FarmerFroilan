@@ -5,7 +5,8 @@ public class Pilot extends Person implements Rider{
         super(name);
     }
 
-    public void makeNoise() {
+    public String makeNoise() {
+        return "Hello, I'm a pilot!";
 
     }
 
