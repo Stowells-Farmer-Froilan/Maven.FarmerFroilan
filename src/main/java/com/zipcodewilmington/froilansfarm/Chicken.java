@@ -30,18 +30,20 @@ public class Chicken extends Animal {
 //        return fertilized;
 //    }
 //
-//    public int eatCorn(){
-//        if (cornStorage.size() > 3){
-//            cornEaten = 3;
-//        }
-//        return cornEaten;
-//    }
-//
-//    public int eatTomato(){
-//        if (tomatoStorage.size() > 1){
-//            tomatoEaten = 1;
-//        }
-//        return tomatoEaten;
-//    }
+    public int eatCorn(){
+        CornStorage store = new CornStorage();
+        if (store.getCornStorage() > 3){
+            cornEaten = 3;
+        }
+        return cornEaten;
+    }
+
+    public int eatTomato(){
+        TomatoStorage store = new TomatoStorage();
+        if (store.getTomatoStorage() > 1){
+            tomatoEaten = 1;
+        }
+        return tomatoEaten;
+    }
 
 }

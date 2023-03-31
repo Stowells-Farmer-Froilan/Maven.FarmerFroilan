@@ -12,6 +12,5 @@ public class EggStorageTest {
         Assert.assertEquals(1, chicken.getEggsLaid());
         Assert.assertEquals(2, chicken.getEggsLaid());
         Assert.assertEquals(3, chicken.getEggsLaid());
-        }
-
     }
+}

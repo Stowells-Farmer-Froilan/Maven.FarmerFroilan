@@ -2,8 +2,7 @@ package com.zipcodewilmington.froilansfarm;
 
 public class EggStorage implements Storage{
     ChickenCoop coop;
-    Chicken chick;
-    public int unFertilizedEggs() {
+    public int getUnFertilizedEggs() {
         Chicken chick = new Chicken();
         int totalEggs = 0;
         for (int i = 0; i < coop.size(); i++) {
