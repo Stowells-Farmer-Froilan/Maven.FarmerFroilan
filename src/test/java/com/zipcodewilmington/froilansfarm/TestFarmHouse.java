@@ -18,7 +18,7 @@ public class TestFarmHouse {
     public void testAddPerson(){
         // Given
         FarmHouse<Person> farmHouse = new FarmHouse<>();
-        Person james = new Person();
+        Farmer james = new Farmer("James");
         // When
         farmHouse.add(james);
         // Then
@@ -28,7 +28,7 @@ public class TestFarmHouse {
     public void testRemovePerson(){
         // Given
         FarmHouse<Person> farmHouse = new FarmHouse<>();
-        Person james = new Person();
+        Farmer james = new Farmer("James");
         // When
         farmHouse.add(james);
         farmHouse.remove(james);
