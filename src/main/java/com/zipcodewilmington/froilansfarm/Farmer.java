@@ -30,4 +30,9 @@ public class Farmer extends Person implements NoiseMaker, Rider, Botanist{
     public void plant(Crop crop) {
         cropRow.add(crop);
     }
+
+    @Override
+    public void eat() {
+
+    }
 }
