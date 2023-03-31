@@ -1,10 +1,19 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class Botanist extends Person {
+public class Botanist<T extends Crop> extends Farmer implements NoiseMaker, Eater {
+    CropRow<T> cropRow;
     public Botanist(String name) {
         super(name);
     }
-    public String plant() {
-        return null;
+    public void plant(Crop seed) {
+        cropRow.add((T) seed);
+    }
+
+    public void speak() {
+
+    }
+
+    public void eat() {
+
     }
 }
