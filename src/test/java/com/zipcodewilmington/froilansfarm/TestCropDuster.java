@@ -62,8 +62,15 @@ public class TestCropDuster {
     @Test
     public void testThatFlyReturnsMessage(){
         CropDuster cropDuster = new CropDuster();
-        String expected = "You soar high in the sky";
+        String expected = "You soar high in the sky!";
         String actual = cropDuster.fly();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testCropDusterMakeNoise(){
+        CropDuster cropDuster = new CropDuster();
+        String expected = "I'm a crop duster yo";
+        String actual = cropDuster.makeNoise();
         Assert.assertEquals(expected, actual);
     }
 }

@@ -23,11 +23,27 @@ public class TestTractor {
 
     @Test
     public void testThatOperateDoesNotHarvestUnfertilizedCornStalks(){
+        Tractor tractor = new Tractor();
+        Botanist botanist = new Botanist();
+        Farmer farmer = new Farmer();
+        botanist.plant(corn);
+        farmer.ride(tractor);
+        boolean expected = false;
+        boolean actual = Corn.hasBeenHarvested();
+        Assert.assertEquals(expected, actual);
+
 
     }
     @Test
     public void testThatOperateDoesNotHarvestUnfertilizedTomatoPlants(){
-
+        Tractor tractor = new Tractor();
+        Botanist botanist = new Botanist();
+        Farmer farmer = new Farmer();
+        botanist.plant(tomato);
+        farmer.ride(tractor);
+        boolean expected = false;
+        boolean actual = Tomato.hasBeenHarvested();
+        Assert.assertEquals(expected, actual);
     }
     @Test
     public void testThatOperateSetsCornHasBeenHarvestedToTrue() {
@@ -73,6 +89,13 @@ public class TestTractor {
         farmer.ride(tractor);
         int expected = 0;
         int actual = tomatoStorage.size();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testTractorMakeNoise(){
+        Tractor tractor = new Tractor();
+        String expected = "I'm a tractor yo";
+        String actual = tractor.makeNoise();
         Assert.assertEquals(expected, actual);
     }
 }
