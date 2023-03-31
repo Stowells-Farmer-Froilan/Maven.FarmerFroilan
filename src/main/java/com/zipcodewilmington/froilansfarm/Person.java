@@ -15,7 +15,8 @@ public abstract class Person {
         this.name = name;
     }
 
-    public String eat() {
+    public void eat(Crop crop) {
+
         return  null;
     }
 
