@@ -3,7 +3,7 @@ package com.zipcodewilmington.froilansfarm;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class botanistTest {
+public class BotanistTest {
     //tests:
     //plant check
     //speak check
@@ -12,17 +12,17 @@ public class botanistTest {
     @Test
     public void testSpeak(){
         //given
-        Botanist botanist = new Botanist();
+        Botanist botanist = new Botanist("Bob");
         String expected = "Yeah I be planting";
         //when
-        String actual = botanist.speak();
+        String actual = botanist.makeNoise();
         //then
         Assert.assertEquals(expected, actual);
     }
     @Test
     public void testPlant(){
         //given
-        Botanist botanist = new Botanist();
+        Botanist botanist = new Botanist("Bob");
         String expected = "There I go planting again!";
         //when
         String actual = botanist.plant();
