@@ -3,38 +3,37 @@ package com.zipcodewilmington.froilansfarm;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestChickenCoop {
+import java.security.Permission;
+
+public class TestFarmHouse {
     @Test
     public void testInstanceOfStorage() {
         // Given
-        FarmHouse<Chicken> farmHouse = new FarmHouse<>();
+        FarmHouse<Person> farmHouse = new FarmHouse<>();
         // Then
         Assert.assertTrue(farmHouse instanceof Storage);
     }
 
     @Test
-    public void testAddChicken(){
+    public void testAddPerson(){
         // Given
-        FarmHouse<Chicken> farmHouse = new FarmHouse<>();
-        Chicken chickie = new Chicken();
+        FarmHouse<Person> farmHouse = new FarmHouse<>();
+        Person james = new Person();
         // When
-        farmHouse.add(chickie);
+        farmHouse.add(james);
         // Then
         Assert.assertEquals(1, farmHouse.size());
     }
     @Test
-    public void testRemoveChicken(){
+    public void testRemovePerson(){
         // Given
-        FarmHouse<Chicken> farmHouse = new FarmHouse<>();
-        Chicken chickie = new Chicken();
+        FarmHouse<Person> farmHouse = new FarmHouse<>();
+        Person james = new Person();
         // When
-        farmHouse.add(chickie);
-        farmHouse.remove(chickie);
+        farmHouse.add(james);
+        farmHouse.remove(james);
         // Then
         Assert.assertEquals(0, farmHouse.size());
     }
 
-
 }
-
-
