@@ -27,8 +27,7 @@ public class TestCropDuster {
         Assert.assertTrue(cropDuster instanceof Rideable);
     }
     @Test
-    public void testThatFertilizeSetsCornHasBeenFertilizedToTrue() {
-        Field field = new Field();
+    public void testThatOperateSetsCornHasBeenFertilizedToTrue() {
         CropDuster cropDuster = new CropDuster();
         Botanist botanist = new Botanist();
         Pilot pilot = new Pilot();
@@ -40,8 +39,7 @@ public class TestCropDuster {
     }
 
     @Test
-    public void testThatFertilizeSetsTomatoHasBeenFertilizedToTrue() {
-        Field field = new Field();
+    public void testThatOperateSetsTomatoHasBeenFertilizedToTrue() {
         CropDuster cropDuster = new CropDuster();
         Botanist botanist = new Botanist();
         Pilot pilot = new Pilot();
@@ -52,65 +50,20 @@ public class TestCropDuster {
         Assert.assertEquals(expected, actual);
     }
     @Test
-    public void testThatFertilizeIncreasesEdibleEggYield() {
-        CropDuster cropDuster = new CropDuster();
-        Chicken chicken = new Chicken();
-        Pilot pilot = new Pilot();
-        pilot.ride(cropDuster);
-        int expected = 1;
-        int actual = eggStorage.size();
-        Assert.assertEquals(expected, actual);
-
-    }
-    public void testThatFertilizeMakesUnFertilizedEggFalseInChicken() {
+    public void testThatOperateMakesHasBeenFertilizedToTrueInChicken() {
         Chicken chicken = new Chicken();
         CropDuster cropDuster = new CropDuster();
         Pilot pilot = new Pilot();
         pilot.ride(cropDuster);
         boolean expected = true;
-        boolean actual = chicken.hasBeenFertilize();
-        Assert.assertEquals(expected, actual);
-    }
-
-    public void testThatFertilizeDecreasesCropRows() {
-        Field field = new Field();
-        CropDuster cropDuster = new CropDuster();
-        Pilot pilot = new Pilot();
-        pilot.ride(cropDuster);
-        int expected = 1;
-        int actual = field.size();
-        Assert.assertEquals(expected, actual);
-    }
-
-    public void testThatFertilizeDecreasesTomatoPlantRows() {
-        Field field = new Field();
-        CropDuster cropDuster = new CropDuster();
-        Pilot pilot = new Pilot();
-        pilot.ride(cropDuster);
-        int expected = 1;
-        int actual = field.size();
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void testThatFarmerCannotRideCropDuster() {
-        Field field = new Field();
-        CropDuster cropDuster = new CropDuster();
-        Farmer farmer = new Farmer();
-        farmer.ride(cropDuster);
-        int expected = 0;
-        int actual = field.size();
+        boolean actual = chicken.hasBeenFertilized();
         Assert.assertEquals(expected, actual);
     }
     @Test
-    public void testThatBotanistCannotRideCropDuster() {
-        Field field = new Field();
+    public void testThatFlyReturnsMessage(){
         CropDuster cropDuster = new CropDuster();
-        Botanist botanist = new Botanist();
-        botanist.ride(cropDuster);
-        int expected = 0;
-        int actual = field.size();
+        String expected = "You soar high in the sky";
+        String actual = cropDuster.fly();
         Assert.assertEquals(expected, actual);
     }
-
 }

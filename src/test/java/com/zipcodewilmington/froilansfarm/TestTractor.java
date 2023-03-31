@@ -20,8 +20,25 @@ public class TestTractor {
         Tractor tractor = new Tractor();
         Assert.assertTrue(tractor instanceof Rideable);
     }
+
     @Test
-    public void testThatHarvestIncreasesTomatoYield(){
+    public void testThatOperateDoesNotHarvestUnfertilizedCornStalks(){
+
+    }
+    @Test
+    public void testThatOperateDoesNotHarvestUnfertilizedTomatoPlants(){
+
+    }
+    @Test
+    public void testThatOperateSetsCornHasBeenHarvestedToTrue() {
+
+    }
+    @Test
+    public void testThatOperateSetsTomatoHasBeenHarvestedToTrue() {
+
+    }
+    @Test
+    public void testThatOperateIncreasesTomatoStorage(){
         Tractor tractor = new Tractor();
         Farmer farmer = new Farm();
         farmer.ride(tractor);
@@ -30,7 +47,7 @@ public class TestTractor {
         Assert.assertEquals(expected, actual);
     }
     @Test
-    public void testThatHarvestIncreasesCornYield(){
+    public void testThatOperateIncreasesCornStorage(){
         Tractor tractor = new Tractor();
         Farmer farmer = new Farm();
         farmer.ride(tractor);
@@ -40,7 +57,7 @@ public class TestTractor {
     }
 
     @Test
-    public void testThatHarvestDecreasesCornStalk(){
+    public void testThatOperateDecreasesCornStalk(){
         Tractor tractor = new Tractor();
         Farmer farmer = new Farm();
         farmer.ride(tractor);
@@ -50,7 +67,7 @@ public class TestTractor {
     }
 
     @Test
-    public void testThatHarvestDecreasesTomatoPlant(){
+    public void testThatOperateDecreasesTomatoPlant(){
         Tractor tractor = new Tractor();
         Farmer farmer = new Farm();
         farmer.ride(tractor);
