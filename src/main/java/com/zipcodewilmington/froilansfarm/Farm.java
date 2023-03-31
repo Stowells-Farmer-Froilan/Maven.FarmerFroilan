@@ -5,8 +5,15 @@ import java.util.List;
 
 public class Farm {
 
-    List<FarmHouse> coopy = new ArrayList<>();
+    List<FarmHouse> coopy;
     List<Stable> stable = new ArrayList<>();
+    List<Field> field = new ArrayList<>();
+    public Farm(){
+        this.coopy = new ArrayList<>();
+        this.stable = new ArrayList<>();
+        this.field = new ArrayList<>();
+
+    }
 
     public void addChickenCoop(FarmHouse<Chicken> coop){
         coopy.add(coop);

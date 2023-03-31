@@ -13,9 +13,7 @@ public class Horse<T extends Edible> extends Animal implements Rideable, Eater, 
     public void setNumberHorses(int numberHorses) {
         this.numberHorses = numberHorses;
     }
-    public void speak() {
-        String noise = "I'm a horse";
-    }
+
     public int eatCorn(T corn) {
         CornStorage store = new CornStorage();
         if (store.getCornStorage() > 3){
@@ -32,6 +30,7 @@ public class Horse<T extends Edible> extends Animal implements Rideable, Eater, 
     }
 
     @Override
+
     public void eat() {
 
     }
@@ -39,6 +38,7 @@ public class Horse<T extends Edible> extends Animal implements Rideable, Eater, 
     @Override
     public String makeNoise() {
         return null;
+
     }
 
     @Override
