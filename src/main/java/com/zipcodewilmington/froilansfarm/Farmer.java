@@ -5,15 +5,16 @@ public class Farmer extends Person implements NoiseMaker, Rider{
         super(name);
     }
 
-    public void speak() {
-
-    }
 
     public void mount() {
 
     }
 
     public void dismount() {
+
+    }
+
+    public void makeNoise() {
 
     }
 }
