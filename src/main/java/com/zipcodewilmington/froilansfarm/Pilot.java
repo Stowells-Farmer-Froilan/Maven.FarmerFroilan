@@ -5,7 +5,7 @@ public class Pilot extends Person implements NoiseMaker{
         super(name);
     }
 
-    public void speak() {
+    public void makeNoise() {
 
     }
 }
