@@ -23,90 +23,97 @@ public class TestTractor {
 
 //    @Test
 //    public void testThatOperateDoesNotHarvestUnfertilizedCornStalks(){
+//        Crop corn = new Crop();
 //        Tractor tractor = new Tractor();
 //        Farmer farmer = new Farmer(null);
 //        farmer.plant(corn);
-//        farmer.ride(tractor);
+//        farmer.mount(); // tractor
 //        boolean expected = false;
-//        boolean actual = Corn.hasBeenHarvested();
+//        boolean actual = corn.hasBeenHarvested();
 //        Assert.assertEquals(expected, actual);
 //    }
 //    @Test
 //    public void testThatOperateDoesNotHarvestUnfertilizedTomatoPlants(){
+//        Crop tomato = new Crop();
 //        Tractor tractor = new Tractor();
 //        Farmer farmer = new Farmer(null);
 //        farmer.plant(tomato);
-//        farmer.ride(tractor);
+//        farmer.mount();//tractor
 //        boolean expected = false;
-//        boolean actual = Tomato.hasBeenHarvested();
+//        boolean actual = tomato.hasBeenHarvested();
 //        Assert.assertEquals(expected, actual);
 //    }
-//
+
 //    @Test
 //    public void testThatOperateSetsCornHasBeenHarvestedToTrue() {
+//        Crop tomato = new Crop();
 //        Tractor tractor = new Tractor();
 //        CropDuster cropDuster = new CropDuster();
 //        Pilot pilot = new Pilot(null);
 //        Farmer farmer = new Farmer(null);
-//        farmer.plant("corn");
-//        pilot.ride(cropDuster);
-//        farmer.ride(tractor);
+//        farmer.plant(tomato);
+//        pilot.mount();//cropduster
+//        farmer.mount();//tractor
 //        boolean expected = true;
 //        boolean actual = Corn.hasBeenHarvested();
 //        Assert.assertEquals(expected, actual);
-//
 //    }
 //    @Test
 //    public void testThatOperateSetsTomatoHasBeenHarvestedToTrue() {
+//        Crop tomato = new Crop();
 //        Tractor tractor = new Tractor();
 //        CropDuster cropDuster = new CropDuster();
 //        Pilot pilot = new Pilot(null);
 //        Farmer farmer = new Farmer(null);
-//        farmer.plant("tomato");
-//        pilot.ride(cropDuster);
-//        farmer.ride(tractor);
+//        farmer.plant(tomato);
+//        pilot.mount();//cropDuster
+//        farmer.mount();//tractor
 //        boolean expected = true;
-//        boolean actual = Tomato.hasBeenHarvested();
+//        boolean actual = tomato.hasBeenHarvested();
 //        Assert.assertEquals(expected, actual);
 //    }
-//    @Test
-//    public void testThatOperateIncreasesTomatoStorage(){
-//        Tractor tractor = new Tractor();
-//        Farmer farmer = new Farmer(null);
-//        farmer.ride(tractor);
-//        int expected = 0;
-//        int actual = TomatoStorage.length();
-//        Assert.assertEquals(expected, actual);
-//    }
-//    @Test
-//    public void testThatOperateIncreasesCornStorage(){
-//        Tractor tractor = new Tractor();
-//        Farmer farmer = new Farmer(null);
-//        farmer.ride(tractor);
-//        int expected = 0;
-//        int actual = cornStorage.size();
-//        Assert.assertEquals(expected, actual);
-//    }
-//
-//    @Test
-//    public void testThatOperateDecreasesCornStalk(){
-//        Tractor tractor = new Tractor();
-//        Farmer farmer = new Farmer(null);
-//        farmer.ride(tractor);
-//        int expected = 0;
-//        int actual = cornStorage.size();
-//        Assert.assertEquals(expected, actual);
-//    }
-//
-//    @Test
-//    public void testThatOperateDecreasesTomatoPlant(){
-//        Tractor tractor = new Tractor();
-//        Farmer farmer = new Farmer(null);
-//        farmer.ride(tractor);
-//        int expected = 0;
-//        int actual = tomatoStorage.size();
-//        Assert.assertEquals(expected, actual);
-//    }
+    @Test
+    public void testThatOperateIncreasesTomatoStorage(){
+        TomatoStorage tomatoStorage = new TomatoStorage();
+        Tractor tractor = new Tractor();
+        Farmer farmer = new Farmer(null);
+        farmer.mount();//tractor
+        int expected = 0;
+        int actual = tomatoStorage.getTomatoStorage();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testThatOperateIncreasesCornStorage(){
+        CornStorage cornStorage = new CornStorage();
+        Tractor tractor = new Tractor();
+        Farmer farmer = new Farmer(null);
+        farmer.ride(tractor);
+        int expected = 0;
+        int actual = cornStorage.getCornStorage();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testThatOperateDecreasesCornStalk(){
+        CornStorage cornStorage = new CornStorage();
+        Tractor tractor = new Tractor();
+        Farmer farmer = new Farmer(null);
+        farmer.ride(tractor);
+        int expected = 0;
+        int actual = cornStorage.getCornStorage();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testThatOperateDecreasesTomatoPlant(){
+        TomatoStorage tomatoStorage = new TomatoStorage();
+        Tractor tractor = new Tractor();
+        Farmer farmer = new Farmer(null);
+        farmer.ride(tractor);
+        int expected = 0;
+        int actual = tomatoStorage.getTomatoStorage();
+        Assert.assertEquals(expected, actual);
+    }
     @Test
     public void testTractorMakeNoise(){
         Tractor tractor = new Tractor();
