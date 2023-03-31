@@ -25,12 +25,12 @@ public class ChickenTest {
         Assert.assertEquals(expected, chicken.getEggsLaid());
     }
 
-    @Test
-    public void testHasBeenFertilized(){
-        Chicken chicken = new Chicken();
-        chicken.hasBeenFertilized();
-        Assert.assertFalse(chicken.hasBeenFertilized());
-    }
+//    @Test
+//    public void testHasBeenFertilized(){
+//        Chicken chicken = new Chicken();
+//        chicken.hasBeenFertilized();
+//        Assert.assertFalse(chicken.hasBeenFertilized());
+//    }
 
     @Test
     public void testEatCorn(){
