@@ -46,4 +46,8 @@ public class Chicken extends Animal {
         return tomatoEaten;
     }
 
+    @Override
+    public void eat() {
+
+    }
 }

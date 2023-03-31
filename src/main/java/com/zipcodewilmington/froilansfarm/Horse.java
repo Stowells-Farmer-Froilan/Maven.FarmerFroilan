@@ -17,16 +17,33 @@ public class Horse<T extends Edible> extends Animal implements Rideable, Eater, 
         String noise = "I'm a horse";
     }
     public int eatCorn(T corn) {
-        if (cornStorage.size() > 3) {
+        CornStorage store = new CornStorage();
+        if (store.getCornStorage() > 3){
             cornEaten = 3;
         }
         return cornEaten;
     }
     public int eatTomato(T tomato) {
-        if (tomatoStorage.size() > 1) {
+        TomatoStorage store = new TomatoStorage();
+        if (store.getTomatoStorage() > 1){
             tomatoEaten = 1;
         }
         return tomatoEaten;
+    }
+
+    @Override
+    public void eat() {
+
+    }
+
+    @Override
+    public String makeNoise() {
+        return null;
+    }
+
+    @Override
+    public void operates() {
+
     }
 
     // Todo: asdflk;jadsf
