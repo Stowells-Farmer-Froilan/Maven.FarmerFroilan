@@ -1,7 +1,11 @@
 package com.zipcodewilmington.froilansfarm;
 
-public class TestHorse {
+import org.junit.Before;
 
+public class TestHorse {
+    public TestHorse() {
+        Horse horse = new Horse();
+    }
 
 
 }
