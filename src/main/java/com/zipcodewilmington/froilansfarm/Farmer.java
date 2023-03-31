@@ -17,7 +17,7 @@ public class Farmer extends Person implements NoiseMaker, Rider, Botanist{
 
     @Override
     public String makeNoise() {
-        return "Howdy, I'm a farmer!";
+        return "Yeah I be farming";
     }
 
     public void ride(Tractor tractor) {
