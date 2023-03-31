@@ -5,12 +5,12 @@ import org.junit.Test;
 
 public class PilotTest {
     @Test
-    public void testSpeak(){
+    public void testMakeNoise(){
         //given
         Pilot pilot = new Pilot("Bob");
         String expected = "Yeah I be flying";
         //when
-        String actual = pilot.speak();
+        String actual = pilot.makeNoise();
         //then
         Assert.assertEquals(expected, actual);
     }

@@ -1,5 +1,6 @@
 package com.zipcodewilmington.froilansfarm;
 
-public interface Botanist<T extends Crop> {
-    public void plant();
+public interface Botanist {
+
+    void plant(Crop crop);
 }

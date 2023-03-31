@@ -1,6 +1,4 @@
 package com.zipcodewilmington.froilansfarm;
 
-public abstract class Animal {
-    public String makeNoise;
-    public String eat;
+public abstract class Animal implements Eater, NoiseMaker{
 }
