@@ -12,6 +12,7 @@ public class CropTest {
         int actual = crop.getCrop();
         Assert.assertEquals(expected, actual);
     }
+
 //    @Test
 //    public void testHasBeenHarvested(){
 //        crop.hasBeenHarvested(true);
@@ -23,6 +24,5 @@ public class CropTest {
 //        crop.hasBeenFertilized(true);
 //        Assert.assertTrue(crop.hasBeenFertilized());
 //    }
-
 
 }

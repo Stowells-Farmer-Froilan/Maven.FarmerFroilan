@@ -22,7 +22,13 @@ public class Chicken extends Produce {
         return eggsLaid;
     }
     public boolean hasBeenFertilized(){
-        boolean fertilized = false;
+        CropDuster duster = new CropDuster();
+        boolean fertilized;
+        if (duster.operates() != null) {
+            fertilized = true;
+        } else {
+            fertilized = false;
+        }
         return fertilized;
     }
 

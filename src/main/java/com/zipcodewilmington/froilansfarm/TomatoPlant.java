@@ -7,6 +7,7 @@ public class TomatoPlant extends Crop {
 
     }
     public void harvestTomato(){
+
         tomato = tomato + 10;
     }
     public int getTomato(){
